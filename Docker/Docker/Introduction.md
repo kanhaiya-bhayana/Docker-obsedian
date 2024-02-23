@@ -182,3 +182,9 @@ $ docker network disconnect
 - All externally exposed ports closed by default
 - You must manually expose via -p, which is better default security!
 - This gets even better later with Swarm and Overlay networks
+
+
+## Docker Networks : DNS and How Containers Find Each Other
+
+#### Docker DNS
+- Docker daemon has a built-in DNS server that containers use by default
