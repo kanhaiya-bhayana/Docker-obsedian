@@ -146,3 +146,39 @@ $ docker container port <container-name>
 $ docker insepct --format {{.NetworkSettings.IPAddress}} <contianer-name>
 ```
 		Return the ip address
+
+
+## Docker Networks : CLI Management
+
+1. Show networks
+```sh
+$ docker network ls
+```
+
+2. Inspect a network 
+```sh
+$ docker network inspect <network-name>
+```
+
+3. Create a network
+```sh
+$ docker network create --driver
+```
+
+4. Attach a network to container
+```sh
+$ docker network connect
+```
+
+5. Detach a network from container
+```sh
+$ docker network disconnect
+```
+
+
+### Docker Networks : Default Security
+- Create your apps so frontend/backend sit on same Docker network
+- Their inter-communication never leaves host
+- All externally exposed ports closed by default
+- You must manually expose via -p, which is better default security!
+- This gets even better later with Swarm and Overlay networks
